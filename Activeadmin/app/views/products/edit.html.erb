@@ -1,0 +1,25 @@
+<%= form_for(:prot, :url=>{:action=>'update', :id=>@prot.id}) do |f| %>
+<div>
+<%= f.label :Name %>
+<%= f.text_field :name %>
+</div>
+<div>
+<%= f.label :Price %>
+<%= f.text_field :price %>
+</div>
+<div>
+<%= f.label :Expire_Date %>
+<%= f.text_field :expire_date %>
+</div>
+<div>
+<%= f.label :SKU_ID %>
+<%= f.text_field :sku_id %>
+</div>
+<div class="field">
+<%=f.label :image %>
+<%=f.file_field :image%>
+</div>
+<div class='actions'>
+<%= f.submit "Create" %>
+</div>
+<%end%>

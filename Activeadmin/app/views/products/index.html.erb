@@ -1,0 +1,18 @@
+<br>
+<% @products.each do |p| %>
+ID: 
+<%= p.id %>
+Name: 
+<%= p.name %>
+Price:
+<%= p.price %>
+Expire_date:
+<%= p.expire_date %>
+Sku_id:
+<%= p.sku_id %>
+Image:
+<%=image_tag p.image.url(:thumb)%>
+<%= link_to "Edit", {:action=>'edit', :id=>p.id} %>
+<%= link_to "show", {:action=>'show', :id=>p.id} %><br>	
+<% end %><br>
+<%= link_to "new", {:action=>'new'} %>
